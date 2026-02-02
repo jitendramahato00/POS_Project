@@ -185,8 +185,8 @@
       <div class="p-8">
         <h3 class="text-center text-sm font-bold text-slate-500 uppercase tracking-widest mb-8">User Login</h3>
 
-        <form action="{{ route('login') }}" method="POST" class="space-y-5">
-          @csrf
+        <form action="<?php echo e(route('login')); ?>" method="POST" class="space-y-5">
+          <?php echo csrf_field(); ?>
 
           <!-- Username Input -->
           <div class="relative">
@@ -246,12 +246,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/master.css">
-    <link rel="icon" href="{{ asset('images/' . ($app_settings->favicon ?? 'favicon.ico')) }}">
-    <title>{{ $app_settings->app_name ?? 'Stocky | Ultimate Inventory With POS' }}</title>
+    <link rel="icon" href="<?php echo e(asset('images/' . ($app_settings->favicon ?? 'favicon.ico'))); ?>">
+    <title><?php echo e($app_settings->app_name ?? 'Stocky | Ultimate Inventory With POS'); ?></title>
 
     <style>
       :root {
@@ -483,9 +483,10 @@
     <div class="auth-page">
       <section class="auth-hero">
         <div class="hero-content">
-          <h1 class="hero-title">{{ $app_settings->login_hero_title ?? 'Welcome back!' }}</h1>
+          <h1 class="hero-title"><?php echo e($app_settings->login_hero_title ?? 'Welcome back!'); ?></h1>
           <p class="hero-subtitle">
-            {{ $app_settings->login_hero_subtitle ?? 'Sign in to access your account and keep your operations in sync.' }}
+            <?php echo e($app_settings->login_hero_subtitle ?? 'Sign in to access your account and keep your operations in sync.'); ?>
+
           </p>
         </div>
       </section>
@@ -493,33 +494,34 @@
       <section class="auth-panel">
         <div class="auth-panel-inner">
           <header>
-            <h2 class="panel-title">{{ $app_settings->login_panel_title ?? 'Sign In' }}</h2>
+            <h2 class="panel-title"><?php echo e($app_settings->login_panel_title ?? 'Sign In'); ?></h2>
             <p class="panel-subtitle">
-              {{ $app_settings->login_panel_subtitle ?? 'Access your dashboard and manage everything from one place.' }}
+              <?php echo e($app_settings->login_panel_subtitle ?? 'Access your dashboard and manage everything from one place.'); ?>
+
             </p>
           </header>
 
-          @if (session('status'))
-          <div class="auth-alert success">{{ session('status') }}</div>
-          @endif
+          <?php if(session('status')): ?>
+          <div class="auth-alert success"><?php echo e(session('status')); ?></div>
+          <?php endif; ?>
 
-          @if ($errors->any())
+          <?php if($errors->any()): ?>
           <div class="auth-alert error">
             <ul>
-              @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-              @endforeach
+              <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+              <li><?php echo e($error); ?></li>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </ul>
           </div>
-          @endif
+          <?php endif; ?>
 
-          <form id="login_form" method="POST" action="{{ route('login') }}">
-            @csrf
+          <form id="login_form" method="POST" action="<?php echo e(route('login')); ?>">
+            <?php echo csrf_field(); ?>
             <div class="field">
               <label for="email">Email</label>
               <div class="input-shell">
                 <span class="input-addon">@</span>
-                <input id="email" type="email" name="email" value="{{ old('email') }}" placeholder="you@company.com" required />
+                <input id="email" type="email" name="email" value="<?php echo e(old('email')); ?>" placeholder="you@company.com" required />
               </div>
             </div>
 
@@ -533,7 +535,7 @@
             </div>
 
             <div class="form-meta">
-              <a class="auth-link" href="{{ route('password.request') }}">Forgot password?</a>
+              <a class="auth-link" href="<?php echo e(route('password.request')); ?>">Forgot password?</a>
             </div>
 
             <button type="submit" class="auth-btn" id="login_submit_btn">
@@ -574,4 +576,4 @@
       })();
     </script>
   </body>
-</html> -->
+</html> --><?php /**PATH C:\laragon\www\c\resources\views/auth/login.blade.php ENDPATH**/ ?>
