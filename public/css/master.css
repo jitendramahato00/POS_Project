@@ -44,3 +44,48 @@
       -webkit-transform: rotate(360deg);
     }
   }
+
+  /* ==================================================
+   SIDEBAR ACTIVE COLOR (Aapka Pink Code)
+   ================================================== */
+.nav-item.active > .nav-link, 
+.nav-link.router-link-exact-active {
+    
+    /* Aapka diya hua code */
+    background: linear-gradient(90deg, #ec4899 0%, #880e4f 50%, #e91e63 100%, #4a0424 100%) !important;
+    background-color: #ec4899 !important;
+    
+    /* Text white hona chahiye */
+    color: #fff !important;
+
+    /* Shadow bhi Pink kar di hai taki purani Blue shadow na dikhe */
+    box-shadow: 0 0 10px 1px rgba(236, 72, 153, 0.7) !important;
+}
+
+/* ==================================================
+   SETTINGS PAGE FIX (Blue to Pink)
+   ================================================== */
+
+/* 1. Upar wala bada Header Box (System Settings) */
+.settings-header {
+    background: linear-gradient(90deg, #ec4899 0%, #880e4f 50%, #e91e63 100%, #4a0424 100%) !important;
+    color: #fff !important;
+    border-radius: 5px; /* Thoda gol kinaara sundar lagega */
+}
+
+/* Header ke andar ka text (h5) white karein */
+.settings-header h5 {
+    color: #fff !important;
+}
+
+/* 2. Side wala Active Tab (Jaise 'General') */
+/* Iska background halka pink aur text dark pink */
+.settings-nav .nav-link.active,
+.settings-nav a.active {
+    background-color: rgba(236, 72, 153, 0.15) !important; /* 15% transparency wala pink */
+    color: #ec4899 !important; /* Dark pink text */
+    
+    /* Side me jo patli line aati hai border ki */
+    border-left: 3px solid #ec4899 !important; 
+    border-right: none !important; 
+}

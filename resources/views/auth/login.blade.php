@@ -149,7 +149,7 @@
       transform: scale(1.05) translateY(-2px);
       box-shadow: 0 12px 25px rgba(173, 20, 87, 0.4);
     }
-
+   
     /* Links Style */
     .accent-pink-600 { accent-color: #d81b60; }
 </style>

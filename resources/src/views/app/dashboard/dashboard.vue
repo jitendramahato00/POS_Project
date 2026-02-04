@@ -1129,7 +1129,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<!-- <style scoped>
 /* Dashboard Header */
 .dashboard-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -1138,6 +1138,53 @@ export default {
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.dashboard-header h2 {
+  color: white !important;
+  font-weight: 600;
+}
+
+.welcome-text {
+  color: #FFFFFF !important;
+  font-size: 1rem;
+  font-weight: 500;
+} -->
+  <style scoped>
+
+.dashboard-header {
+  
+  background: linear-gradient(135deg, #ec4899 0%, #880e4f 50%, #e91e63 100%, #4a0424 100%) !important;
+  
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard ke baaki Purple buttons ko bhi Pink karte hain taaki match karein */
+.stat-card-link, 
+.table-card-link, 
+.date-picker-btn:hover {
+  /* color: #8B5CF6; <-- Purana Purple */
+  color: #ec4899 !important; /* Naya Pink */
+}
+
+.sales-card .stat-card-icon, 
+.welcome-icon, 
+.stock-icon-wholesale {
+  /* background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%); <-- Purana Purple */
+  background: linear-gradient(135deg, #ec4899 0%, #880e4f 100%) !important;
+}
+
+.warehouse-filter >>> .v-select .vs__dropdown-option--highlight {
+  background: #ec4899 !important;
+}
+
+.legend-dot.sales-dot {
+  background: #ec4899 !important;
+}
+
+/* ... Baaki ka saara code waisa hi rehne dein ... */
 
 .dashboard-header h2 {
   color: white !important;

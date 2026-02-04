@@ -1,3 +1,7 @@
+// ===================================================================
+// OLD SOLID AND GRADIENT COLORS 
+// ===================================================================
+/*
 $solid-colors: (
   "blue": #3b82f6,
   "midnight-blue": #0c0c3c,
@@ -15,11 +19,46 @@ $solid-colors: (
   "slate-gray": #64748b,
 );
 
-// Gradient colors
 $gradient-colors: (
   gradient-purple-indigo: (
     "start-color": #8b5cf6,
     "end-color": #33214b,
+  ),
+  gradient-black-blue: ( ... ),
+  ... (baaki colors) ...
+);
+*/
+
+
+// ===================================================================
+// NEW THEME - PINK MAROON CUSTOM DESIGN (Active Code)
+// ===================================================================
+
+// Global Primary Variable (Buttons aur Dashboard ke liye)
+$primary: #ec4899; 
+
+$solid-colors: (
+  "blue": #3b82f6,
+  "midnight-blue": #0c0c3c,
+  "indigo": #ec4899,       // Indigo ko Pink kiya
+  "dark-purple": #322740,
+  "purple": #ec4899,       // Purple ko Pink kiya
+  "pink": #ec4899,         // Aapka Naya Pink
+  "red": #ef4444,
+  "orange": #f97316,
+  "yellow": #f59e0b,
+  "green": #10b981,
+  "teal": #14b8a6,
+  "cyan": #06b6d4,
+  "gray": #71717a,
+  "slate-gray": #64748b,
+);
+
+$gradient-colors: (
+  // Dashboard Banner ke liye aapka bataya hua custom gradient
+  gradient-purple-indigo: (
+    "start-color": #ec4899, // Bright Pink (0%)
+    "end-color":   #4a0424, // Dark Maroon (100%)
   ),
   gradient-black-blue: (
     "start-color": #004e92,
@@ -34,3 +73,4 @@ $gradient-colors: (
     "end-color": #1f1c2c,
   ),
 );
+
