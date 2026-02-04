@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premium Login Design</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{{ asset('images/' . (($app_settings->favicon ?? null) ?: 'favicon.ico')) }}">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -149,7 +150,7 @@
       transform: scale(1.05) translateY(-2px);
       box-shadow: 0 12px 25px rgba(173, 20, 87, 0.4);
     }
-
+   
     /* Links Style */
     .accent-pink-600 { accent-color: #d81b60; }
 </style>
@@ -175,7 +176,7 @@
       <!-- Top Side (Pink Gradient) -->
       <div class="card-header">
         <img src="https://i.pravatar.cc/150?u=female" alt="User" class="profile-img">
-        <h2 class="text-xl font-bold">Welcome to the website</h2>
+        <h2 class="text-xl font-bold">Welcome to Pink Villa Nepal</h2>
         <p class="text-xs opacity-70 mt-2 px-4 leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.
         </p>
