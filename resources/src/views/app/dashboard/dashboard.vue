@@ -6,10 +6,16 @@
       <!-- Welcome Header -->
       <div class="dashboard-header mb-4">
         <div class="row align-items-center">
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <h2 class="mb-1 text-dark">{{ $t('dashboard') }}</h2>
             <p class="welcome-text mb-0">{{ $t('Welcome_back_message', { username: currentUser.username }) }}</p>
-          </div>
+          </div> -->
+         <div class="col-md-6">
+    <h2 class="mb-1 text-dark">{{ $t('dashboard') }}</h2>
+    <!-- Neeche wali line ko change kiya gaya hai -->
+    <p class="welcome-text mb-0">Welcome to Pink Villa Nepal !{{ currentUser.username }} Whats happening today?</p>
+</div>
+         
           <div class="col-md-6 text-right">
             <div class="dashboard-header-filters d-flex align-items-center justify-content-end gap-2 flex-wrap">
               <div class="warehouse-filter">

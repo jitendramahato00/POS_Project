@@ -114,14 +114,14 @@
           variant="link"
         >
           <template slot="button-content">
-            <div class="user-avatar">
+            <!-- <div class="user-avatar">
               <img
                 v-if="currentUser && currentUser.avatar"
                 :src="'/images/avatar/' + currentUser.avatar"
                 alt="user"
               />
               <img v-else src="/images/avatar/avatar-default.jpg" alt="user" />
-            </div>
+            </div> -->
           </template>
           <div class="user-dropdown-menu">
             <div class="dropdown-header">
