@@ -12,8 +12,13 @@
         class="footer-bottom border-top pt-3 d-flex flex-column flex-sm-row align-items-center"
       >
         <div class="d-flex align-items-center">
-          <img v-if="currentUser.logo" class="logo" :src="'/images/'+currentUser.logo" alt width="60" height="60">
-          <img v-else class="logo" src="/images/logo.png" alt width="60" height="60">
+          <!-- Image size set to 60px width and auto height -->
+          <img 
+            src="/images/pink.jpg" 
+            alt="logo" 
+            style="width: 60px; height: auto; border-radius: 4px;"
+            class="mr-3" 
+          />
           <div>
             <div>
               <p class="m-0">&copy; {{ new Date().getFullYear() }} {{$t('developed_by')}} {{currentUser.developed_by || 'Stocky'}}</p>

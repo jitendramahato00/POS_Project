@@ -6,24 +6,22 @@
       class="vertical-sidebar ps scroll"
     >
       <!-- Logo Section -->
-      <div class="vertical-sidebar-header">
-        <div class="header-brand" @click="navigateToDashboard">
-          <div class="sidebar-logo">
-            <img 
-              v-if="currentUser && currentUser.logo" 
-              :src="'/images/' + currentUser.logo" 
-              alt="logo" 
-              class="logo-image"
-            />
-            <div v-else class="logo-placeholder">
-              {{ (currentUser && currentUser.company) ? currentUser.company[0] : 'S' }}
-            </div>
-          </div>
-          <div class="company-name" v-if="!isCollapsed && currentUser">
-            {{ currentUser.company || 'Stocky' }}
-          </div>
-        </div>
-      </div>
+     <!-- Logo Section -->
+<div class="vertical-sidebar-header">
+  <div class="header-brand" @click="navigateToDashboard">
+    <div class="sidebar-logo">
+      <!-- Purana dynamic logic hata kar ye static image laga di gayi hai -->
+      <img 
+        src="/images/pink.jpg" 
+        alt="logo" 
+        class="logo-image"
+      />
+    </div>
+    <div class="company-name" v-if="!isCollapsed && currentUser">
+      {{ currentUser.company || 'Stocky' }}
+    </div>
+  </div>
+</div>
 
       <!-- Navigation Menu -->
       <nav class="vertical-nav-menu">
