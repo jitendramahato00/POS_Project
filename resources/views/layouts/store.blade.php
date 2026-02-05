@@ -115,6 +115,7 @@
           <span class="logo-shop">SHOP</span>
         </a>
 
+<<<<<<< Updated upstream
         <!-- Search Bar (Centered) -->
         <div class="search-wrapper d-none d-lg-block">
           <form action="{{ route('store.shop') }}" method="GET">
@@ -122,6 +123,45 @@
             <button type="submit"><i class="bi bi-search"></i></button>
           </form>
         </div>
+=======
+  {{-- Navbar --}}
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="{{ route('store.index') }}">
+        @if(!empty($s->logo_path))
+          <img src="{{ $assetPath($s->logo_path) }}" alt="{{ $s->store_name ?? __('messages.Store') }}" height="32" class="me-2">
+        @endif
+        <span class="text-primary">{{ $s->store_name ?? __('messages.Store') }}</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('store.index') }}">{{ __('messages.Home') }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('store.shop') }}">{{ __('messages.Shop') }}</a>
+          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            🌐 {{ strtoupper(app()->getLocale()) }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+            <li><a class="dropdown-item" href="{{ route('lang.switch', 'en') }}">English</a></li>
+          
+          </ul>
+        </li>
+
+        </ul>
+
+        {{-- Account (right side) --}}
+        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+>>>>>>> Stashed changes
 
         <!-- Auth Links -->
         <div class="auth-area d-flex align-items-center gap-3">
