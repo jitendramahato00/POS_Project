@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="<?php echo e(asset('images/' . (($app_settings->favicon ?? null) ?: 'favicon.ico'))); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+<link rel="icon" href="<?php echo e(asset('images/' . ($app_settings->favicon ?? 'favicon.ico'))); ?>">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -577,4 +577,8 @@
       })();
     </script>
   </body>
+<<<<<<<< HEAD:storage/framework/views/03d760efd841423de88f3a81ac74a89e.php
 </html> --><?php /**PATH C:\laragon\www\d\resources\views/auth/login.blade.php ENDPATH**/ ?>
+========
+</html> --><?php /**PATH C:\laragon\www\POS_Project\resources\views/auth/login.blade.php ENDPATH**/ ?>
+>>>>>>>> 40b91ff2188bb909c6599453a45d35dd622ca57a:storage/framework/views/2c4ec8e2b8fd3e32447e2a26251ec7df.php

@@ -38,4 +38,8 @@
 
   </body>
 </html>
+<<<<<<<< HEAD:storage/framework/views/93f3c40a8bf795a0362a871e67bc6de6.php
 <?php /**PATH C:\laragon\www\d\resources\views/layouts/master.blade.php ENDPATH**/ ?>
+========
+<?php /**PATH C:\laragon\www\POS_Project\resources\views/layouts/master.blade.php ENDPATH**/ ?>
+>>>>>>>> 40b91ff2188bb909c6599453a45d35dd622ca57a:storage/framework/views/e51fd0e9bcf40fbce78353df4eff5550.php
