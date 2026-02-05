@@ -7,7 +7,7 @@
   <title>Premium Login Design</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+<link rel="icon" href="<?php echo e(asset('images/' . ($app_settings->favicon ?? 'favicon.ico'))); ?>">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -149,7 +149,7 @@
       transform: scale(1.05) translateY(-2px);
       box-shadow: 0 12px 25px rgba(173, 20, 87, 0.4);
     }
-
+   
     /* Links Style */
     .accent-pink-600 { accent-color: #d81b60; }
 </style>
